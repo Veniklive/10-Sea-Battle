@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.sea-battle-grid {
+  display: grid;
+  grid-template-columns: repeat(11, 60px);
+  grid-template-rows: repeat(11, 60px);
+  width: 661px;
+  height: 661px;
+  margin: 25px;
+  background: repeating-linear-gradient(
+      0deg,
+      black 0px,
+      black 2px,
+      transparent 2px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      black 0px,
+      black 2px,
+      transparent 2px,
+      transparent 60px
+    );
+  grid-template-areas:
+    "N0 A B C D E F G H I J"
+    "N1 . . . . . . . . . ."
+    "N2 . . . . . . . . . ."
+    "N3 . . . . . . . . . ."
+    "N4 . . . . . . . . . ."
+    "N5 . . . . . . . . . ."
+    "N6 . . . . . . . . . ."
+    "N7 . . . . . . . . . ."
+    "N8 . . . . . . . . . ."
+    "N9 . . . . . . . . . ."
+    "N10 . . . . . . . . . .";
+}
+
+.sea-battle-grid div:first-child {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.board-cell {
+  margin: auto;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.board-cell.num2 {
+  grid-area: N2;
+}
+.board-cell.num3 {
+  grid-area: N3;
+}
+.board-cell.num4 {
+  grid-area: N4;
+}
+.board-cell.num5 {
+  grid-area: N5;
+}
+.board-cell.num6 {
+  grid-area: N6;
+}
+.board-cell.num7 {
+  grid-area: N7;
+}
+.board-cell.num8 {
+  grid-area: N8;
+}
+.board-cell.num9 {
+  grid-area: N9;
+}
+.board-cell.num10 {
+  grid-area: N10;
+}
+
+.ship {
+  outline: 2px solid black;
+  margin: 6px;
+}
+
+.six-deck {
+  background-color: red;
+}
+
+.four-deck {
+  background-color: blue;
+}
+
+.three-decker {
+  background-color: greenyellow;
+}
+
+.double-decker {
+  background-color: purple;
+}
+
+.dds-1 {
+}
