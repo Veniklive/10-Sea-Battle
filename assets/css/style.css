@@ -2,26 +2,30 @@
   box-sizing: border-box;
 }
 
+html {
+  --cell-grid-size: 60px;
+}
+
 .sea-battle-grid {
   display: grid;
-  grid-template-columns: repeat(11, 60px);
-  grid-template-rows: repeat(11, 60px);
-  width: 661px;
-  height: 661px;
+  grid-template-columns: repeat(11, var(--cell-grid-size));
+  grid-template-rows: repeat(11, var(--cell-grid-size));
+  width: calc(var(--cell-grid-size) * 11 + 1px);
+  height: calc(var(--cell-grid-size) * 11 + 1px);
   margin: 25px;
   background: repeating-linear-gradient(
       0deg,
       black 0px,
       black 2px,
       transparent 2px,
-      transparent 60px
+      transparent var(--cell-grid-size)
     ),
     repeating-linear-gradient(
       90deg,
       black 0px,
       black 2px,
       transparent 2px,
-      transparent 60px
+      transparent var(--cell-grid-size)
     );
   grid-template-areas:
     "N0 A B C D E F G H I J"
@@ -56,7 +60,7 @@
 
 .board-cell {
   margin: auto;
-  font-size: 30px;
+  font-size: calc(var(--cell-grid-size) / 2);
   font-family: sans-serif;
   font-weight: bold;
 }
