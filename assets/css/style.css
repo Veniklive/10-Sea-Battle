@@ -80,7 +80,7 @@
 
 .ship {
   outline: 2px solid black;
-  margin: 6px;
+  margin: 5px;
 }
 
 .six-deck {
@@ -100,4 +100,32 @@
 }
 
 .dds-1 {
+  grid-column-end: span 2;
+}
+.dds-2 {
+  grid-area: 4/11/6/11;
+}
+.dds-3 {
+  grid-area: 7/7/9/7;
+}
+.dds-4 {
+  grid-area: 9/2/9/4;
+}
+.tds-1 {
+  grid-area: 2/5/5/5;
+}
+.tds-2 {
+  grid-area: 4/7/4/10;
+}
+.tds-3 {
+  grid-area: 7/11/10/11;
+}
+.fds-1 {
+  grid-area: 2/8/2/12;
+}
+.fds-2 {
+  grid-area: 4/2/8/2;
+}
+.sds-1 {
+  grid-area: 11/6/11/12;
 }
